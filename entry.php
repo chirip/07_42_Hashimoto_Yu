@@ -12,20 +12,20 @@
 
 <div class="container">
     <h1>登録フォーム</h1>
-    <p>Webサイトの内容は<a href="./" target="_blank">こちらから</a>確認できます。</p>
+    <p>登録内容は<a href="./" target="_blank">こちらから</a>確認できます。</p>
     <form action="insert.php" method="post">
         <ul>
             <li class="form-item">
-                <label for="title">書籍名</label>
-                <input type="text" name="title" id="title" class="uk-input">
+                <label for="bookname">書籍名</label>
+                <input type="text" name="bookname" id="bookname" class="uk-input">
             </li>
             <li class="form-item">
-                <label for="url">URL</label>
-                <input type="url" name="url" id="url" class="uk-input">
+                <label for="bookurl">URL</label>
+                <input type="url" name="bookurl" id="url" class="uk-input">
             </li>
             <li class="form-item">
                 <label for="detail">コメント</label>
-                <textarea name="text" id="text" cols="30" rows="10" class="uk-textarea"></textarea>
+                <textarea name="detail" id="detail" cols="30" rows="10" class="uk-textarea"></textarea>
             </li>
         </ul>
         <input type="submit" value="送信">
