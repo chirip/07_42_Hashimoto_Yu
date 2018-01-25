@@ -33,34 +33,36 @@ if($flag==false){
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/sanitize.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
+	<link rel="stylesheet" href="css/style_index.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">	</head>
 <body>
-<table>
-	<tbody>
-		<tr>
-			<th>id</th>
-			<th>書籍名</th>
-			<th>URL</th>
-			<th>コメント</th>
-			<th>日時</th>
-		</tr>
-		<?php
-			while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
-		?>
-		<tr>
-			<td><?php echo $result['id'];?></td>
-			<td><?php echo $result['bookname'];?></td>
-			<td><a href="<?php echo $result['bookurl'];?>" target="_blank">
-					<?php echo $result['bookurl'];?>
-				</a>
-			</td>
-			<td><?php echo $result['detail'];?></td>
-			<td><?php echo $result['puttime'];?></td>
-		</tr>
-		<?php } ?>
-	</tbody>
+<div class="wrapper">
+	<table>
+		<tbody>
+			<tr>
+				<th class="w1">link</th>
+				<th class="w2">書籍名</th>
+				<!-- <th class="w3">URL</th> -->
+				<th class="w4">コメント</th>
+				<th class="w5">日時</th>
+			</tr>
+			<?php
+				while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
+			?>
+			<tr>
+				<td><a href="<?php echo $result['bookurl'];?>" target="_blank">
+					<i class="fa fa-external-link" aria-hidden="true"></i></a>
+				</td>
+				<td><?php echo $result['bookname'];?></td>
+				<td><?php echo $result['detail'];?></td>
+				<td><?php echo $result['puttime'];?></td>
+				
+				
+			</tr>
+			<?php } ?>
+		</tbody>
 	</table>
+</div>
 	
 </body>
 </html>

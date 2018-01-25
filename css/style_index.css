@@ -1,0 +1,79 @@
+/* index.php*/
+body{
+    background-image: url(../title.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+.wrapper{
+    height: 370px;
+    position: absolute;
+    top:365px;
+    left:110px;
+    background-color:  #464646;
+    overflow: scroll;
+    
+}
+
+table{
+    table-layout: fixed; 
+	border-spacing: 0;
+    border-collapse: separate;
+    text-align: center;
+    width: 1200px;
+    height: 390px;
+}
+
+.w1{
+    width: 70px;
+}
+.w5{
+    width: 200px;
+}
+table th,table td{
+    overflow-wrap: break-word;
+	border-top: 1px solid rgb(155, 156, 155);
+	border-left: 1px solid rgb(155, 156, 155);
+}
+table th{
+	padding: 5px 10px;
+	background: #631400;
+	color: #FFFFFF;
+}
+
+table td{
+	padding: 2px 5px;
+	background: #FCFCFC;
+	color: #290000;
+}
+table tr:nth-child(even) td{
+	background: #EEEEEE;
+}
+
+
+table th:last-child,table td:last-child{
+	border-right: 1px solid　rgb(155, 156, 155);
+}
+table tr:last-child th,table tr:last-child td{
+	border-bottom: 1px solid rgb(155, 156, 155);
+}
+/* table tr:first-child :first-child{
+	border-top-left-radius: 5px;
+}
+table tr:first-child :last-child{
+	border-top-right-radius: 5px;
+}
+table tr:last-child :first-child{
+	border-bottom-left-radius: 5px;
+}
+table tr:last-child :last-child{
+	border-bottom-right-radius: 5px;
+} */
+table tr:not(:first-child) th,table tr:not(:first-child) td{
+	border-top:none;
+}
+
+
+
