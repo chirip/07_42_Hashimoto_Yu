@@ -5,6 +5,8 @@ html{
 }
 body{
 	font-size: 1.6rem;
+	background-image: url(../books.jpg);
+	background-size: cover;
 }
 ul{
 	list-style: none;
@@ -18,10 +20,12 @@ ul{
  *
  -----------------*/
  h1{
-    background: rgba(255,255,255,0.3);	
+	 color: #fff;
+    /* background: rgba(255,255,255,0.3);	 */
  }
  p, a{
-	background: rgba(255,255,255,0.3);
+	color: #fff;	
+	/* background: rgba(255,255,255,0.3); */
 	
  }
  .container{
@@ -30,9 +34,9 @@ ul{
 	 box-sizing: border-box;
 	 padding: 40px;
 	 height: 100%;
-	 background-image: url(../books.jpg);
 	}
  label{
+	color: #fff;	
 	 display: block;
  }
  input,textarea{

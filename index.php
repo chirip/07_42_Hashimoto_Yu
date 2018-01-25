@@ -24,7 +24,6 @@ if($flag==false){
     exit("ErrorQuery:".$error[2]);
 }else{//以下sqlの実行が成功した場合。
 
-
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +39,7 @@ if($flag==false){
 	<table>
 		<tbody>
 			<tr>
+				<th class="w1">id</th>
 				<th class="w1">link</th>
 				<th class="w2">書籍名</th>
 				<!-- <th class="w3">URL</th> -->
@@ -50,6 +50,8 @@ if($flag==false){
 				while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
 			?>
 			<tr>
+				<td><?php echo $result['id'];?></td>
+
 				<td><a href="<?php echo $result['bookurl'];?>" target="_blank">
 					<i class="fa fa-external-link" aria-hidden="true"></i></a>
 				</td>
@@ -63,7 +65,15 @@ if($flag==false){
 		</tbody>
 	</table>
 </div>
+
+<script>
+	//削除
 	
+$del = 'DELETE FROM gsblog_table WHERE id=:id'
+$stmt2 = $pdo->prepare($del);
+$stmt2->bindValue(':id',$id,PDO::PARAM_STR);
+$stmt2->execute();
+</script>
 </body>
 </html>
 
